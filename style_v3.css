@@ -443,6 +443,10 @@ legend {
     margin-left: calc(3rem + 5px);
 }
 
+#footer-band {
+    height: 2px; 
+}
+
 footer .container {
     height: 100%; 
     align-items: center;
