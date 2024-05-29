@@ -447,7 +447,7 @@ legend {
     height: 2px; 
 }
 
-footer .container {
+footer > .container {
     height: 100%; 
     align-items: center;
     justify-content: center;
