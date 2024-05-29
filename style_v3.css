@@ -75,7 +75,7 @@ html, body, main {
 header {
     background-color: var(--white);
     padding: 10px 0;
-    height: 60px; 
+    min-height: 60px; 
     font-family: "Montserrat", sans-serif ;
 }
 
@@ -129,9 +129,13 @@ h4 {
 }
 
 .brand img {
-    width: 30px;
-    height: auto;
+    width: auto;
+    height: 60px;
     margin-right: 10px;
+}
+
+.brand-text {
+    font-size: clamp(1.25rem, 0.603rem + 4.138vw, 2rem);
 }
 
 .nav ul {
@@ -141,6 +145,7 @@ h4 {
 
 .nav ul li {
     margin-left: 20px;
+    min-width: 72px; 
 }
 
 .nav ul li a {
@@ -235,6 +240,10 @@ h4 {
     font-size: 3rem; 
     color: var(--services-fg);
     z-index: 1; 
+}
+
+#tagline {
+    font-size: clamp(2.5rem, 0.895rem + 3.871vw, 3rem);
 }
 
 .container > .section-heading {
@@ -459,3 +468,83 @@ footer {
     background-color: var(--footer-bg); 
     height: 65px; 
 }
+
+/* Media Queries */ 
+
+@media (max-width: 870px) {
+    .landing {
+        height: auto; 
+    }
+    
+    .landing > .container {
+        flex-direction: column;
+        gap: 0; 
+    }
+
+    .landing .column-1 {
+        min-height: 500px; 
+        width: 100%;
+    }
+
+    .landing .column-2 {
+        width: auto; 
+        margin-bottom: 3rem; 
+    }
+
+    .fieldset {
+        width: auto; 
+    }
+
+    .services .column-1 {
+        width: auto; 
+    }
+
+    .services .column-2 {
+        display: none; 
+    }
+
+    .about .container {
+        flex-direction: column; 
+    }
+
+    .about .column-1 {
+        width: auto; 
+    }
+    
+    
+    .about .column-2 {
+        width: auto;
+        margin-top: 3rem; 
+    }
+}
+
+@media (max-width: 520px) { 
+    .brand img {
+        display: none; 
+    }
+
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .brand-text {
+        text-wrap: nowrap; 
+    }
+
+    .about .column-2 {
+        justify-content: center;
+    }
+
+    .color-band-vertical, .color-band-vertical-2 {
+        margin-left: auto; 
+    }
+
+    .grey-text {
+        margin: auto; 
+    }
+
+    .img-wrapper + .contact-wrapper {
+        justify-content: center;
+    }
+
+    }
