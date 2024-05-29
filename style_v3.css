@@ -1,0 +1,461 @@
+:root {
+
+
+    --salmon: #FF8474; 
+    --comp-1: #FCAC57;
+    --comp-1-hover: #FDBE89; 
+    --comp-1B: #BC8142;
+    --comp-2: #F2FC57;
+    --comp-2-hover: #F6FD89; 
+    --comp-2B: #B5BC42;  
+    --comp-3: #97FC57;
+    --comp-3-hover: #C0FD9A;
+    --comp-3B: #72BC42;
+    --comp-4: #57FC71;
+    --comp-4-hover: #9AFDA9;
+    --comp-4B: #42BC55;  
+
+    --black: #303B3B;
+    --white: white; 
+    --red: #ec2768;
+    --purple-pink: #E132D9; 
+    --light-grey: #AEAEAE; 
+    --background: #FBF9F6;
+    --nav-text: var(--black);
+    --services-bg: #C9A58A;
+    --services-fg: #3F272F;
+    --contact-bg: white; 
+    --footer-bg: #555064; 
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat-Medium.otf");
+}
+
+html, body, main {
+    height: 100%; 
+}
+
+.section-heading {
+    width: 90%; 
+    margin: 0 auto; 
+    margin-bottom: 2rem; 
+}
+
+.container { 
+    gap: 1rem; 
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    margin-bottom: 1.75rem; 
+}
+
+.img-wrapper {
+    position: relative; 
+    max-width: 100%
+}
+
+.column-1, .column-2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+header {
+    background-color: var(--white);
+    padding: 10px 0;
+    height: 60px; 
+    font-family: "Montserrat", sans-serif ;
+}
+
+.services a {
+    text-decoration: none; 
+    font-weight: bold; 
+    margin-bottom: 1.5rem;
+    color: inherit; 
+}
+
+.services a:hover {
+    color: black;
+}
+
+h4 {
+    margin-bottom: 1rem; 
+}
+
+.color-band {
+    height: 5px;
+    width: 100%;
+    background-image: linear-gradient(to right, #ff23e2, #00A18F)
+}
+
+.color-band-vertical {
+    width: 5px;
+    background-image: linear-gradient(to top, #ff23e2, #00A18F);
+    margin-right: 1rem; 
+    margin-left: 2rem; 
+}
+
+.color-band-vertical-2 {
+    width: 5px;
+    background-image: linear-gradient(to top, #8F59BD, #00A18F);
+    margin-right: 1rem; 
+    margin-left: 2rem; 
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #333; /* Example color */
+    font-weight: bold;
+}
+
+.nav a:hover {
+    transition: color 0.3s; 
+    color: #FE23E2; 
+}
+
+
+/* Section 1 */ 
+
+.landing {
+    height: calc(100vh - 65px);
+    font-family: "Source Sans 3", sans-serif; 
+}
+
+.landing > .container {
+    display: flex; 
+    width: 100%; 
+    height: 100%;
+    padding-bottom: 42px; 
+}
+
+.landing .column-1 {
+    background-image: url("images/AdobeStock_809537158.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--background);
+    width: 70%;
+    height: 100%; 
+}
+
+.landing .column-2 {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 3rem;
+    width: 50%; 
+    height: 100%; 
+}
+
+.yew-branch {
+    position: absolute; 
+    height: 500px;
+    bottom: 0px;
+    left: 150px;  
+    width: auto; 
+    opacity: 0.5;
+    z-index: -1; 
+}
+
+/* Curved Border */ 
+
+.curved-top::before {
+    content: "";
+    height: 84px;
+    background: var(--services-bg);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    position: absolute;
+    top: -84px;
+    left: 0;
+    right: 0;
+    -webkit-transform: scaleX(1.15);
+    transform: scaleX(1.15);
+}
+
+.curved-top {
+    position: relative;
+}
+
+.services {
+    font-family: "Source Sans 3", sans-serif;
+    background-color: var(--services-bg);
+    padding-bottom: 42px; 
+    height: auto; 
+ }
+
+.services img {
+    max-width: 450px; 
+    height: auto; 
+ }
+
+#tagline, .subtitle { 
+    position: relative; 
+    font-weight: 350; 
+    font-size: 3rem; 
+    color: var(--services-fg);
+    z-index: 1; 
+}
+
+.container > .section-heading {
+    display: block; 
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem; 
+
+}
+
+.section-heading h2 {
+    margin-top: 42px; 
+    color: var(--black); 
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 350; 
+    font-size: 3rem; 
+}
+
+.services .column-2 {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; 
+    height: auto; 
+    margin-bottom: 2rem;
+}
+
+.services .column-1 {
+    align-items: baseline;
+}
+
+.services .curved-top {
+    background-color: var(--contact-bg);
+    position: relative; 
+    top: 84px; 
+
+}
+
+.services .curved-top::before {
+    content: "";
+    height: 84px;
+    background: var(--contact-bg);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    position: absolute;
+    -webkit-transform: scaleX(1.5);
+    transform: scaleX(1.5);
+}
+
+.subtitle {
+    margin-top: 1.5rem; 
+    margin-bottom: 1.5rem; 
+    font-size: 1.5rem; 
+    width: 75%; 
+}
+
+.letter-psi {
+    display: block; 
+    font-family: "Nanum Gothic";
+    color: #AEAEAE; 
+    font-size: 27rem;  
+    position: absolute;
+    left: -12.5%;
+    z-index: 0; 
+}
+
+
+ /* 'Types of Therapy' Menu */ 
+
+ fieldset {
+    border: 1px solid var(--light-grey); 
+    border-radius: 10px;
+    padding: 10px;
+    width: 75%;
+    margin: 0 auto;  
+    z-index: 1; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+legend {
+    font-family: "Montserrat", sans-serif; 
+    color: var(black);
+    font-size: 1.5rem;
+
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#individual-therapy {
+    background-color: var(--comp-1);
+    border-color: var(--comp-1B);
+}
+
+#individual-therapy:hover {
+    background-color: var(--comp-1-hover);
+}
+
+#couples-therapy {
+    background-color: var(--comp-2);
+    border-color: var(--comp-2B);
+}
+
+#couples-therapy:hover {
+    background-color: var(--comp-2-hover);
+}
+
+#supervision {
+    background-color: var(--comp-3);
+    border-color: var(--comp-3B);
+}
+
+#supervision:hover {
+    background-color: var(--comp-3-hover);
+}
+
+#consultation{
+    background-color: var(--comp-4);
+    border-color: var(--comp-4B);
+}
+
+#consultation:hover {
+    background-color: var(--comp-4-hover); 
+}
+
+.fieldset-button {
+    font-weight: bold;
+}
+
+.arrow-outer {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.fa-arrow-right {
+    font-family: FontAwesome;
+    content: '\f061'; /* FontAwesome right arrow */
+}
+
+.services .large-link {
+    color: var(--services-fg); 
+    font-family: "Monserrat", sans-serif; 
+}
+
+.large-link::after {
+    font-family: FontAwesome;
+    content: ' \f061'; 
+}
+
+.about .column-2 {
+    align-items: baseline;
+    gap: 2rem;
+}
+
+.about iframe {
+    min-height: 500px; 
+    height: auto;
+    max-width: 100%; 
+}
+
+.about .container { 
+    margin-bottom: 4rem;
+}
+
+.contact-wrapper {
+    display: flex;  
+}
+
+.contact-text {
+    font-family: "Source Sans 3";
+    font-size: 1.5rem; 
+    font-weight: 350; 
+}
+
+.contact-text .yew-tree-emphasis {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;  
+}
+
+.grey-text {
+    font-family: "Source Sans 3", sans-serif; 
+    font-size: 1.5rem; 
+    font-weight: 350;
+    color: grey;  
+    margin-left: calc(3rem + 5px);
+}
+
+footer .container {
+    height: 100%; 
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 0.8rem;  
+}
+
+.footer-links ul {
+    list-style-type: none; 
+    display: flex;
+    gap: 1rem; 
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer {
+    background-color: var(--footer-bg); 
+    height: 65px; 
+}
