@@ -40,7 +40,7 @@
 html, body {
     overflow-x: hidden;  
     overflow-y: auto; /* Ensure smooth vertical scrolling */
-    min-height: 100%; /* Ensure the body stretches to the full height */
+    min-height: 100vw; /* Ensure the body stretches to the full height */
 }
 
 body {
@@ -75,7 +75,7 @@ main {
 
 .column-1, .column-2 {
     width: 50%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,7 +179,6 @@ nav a:hover {
     display: flex; 
     width: 100%; 
     height: 100%;
-    padding-bottom: 42px; 
     flex-grow: 1;
 }
 
@@ -191,6 +190,8 @@ nav a:hover {
     background-color: var(--background);
     width: 70%;
     flex-grow: 1; /* Make it stretch */
+    min-height: 100vh; 
+    width: 100%;
 }
 
 .landing .column-2 {
